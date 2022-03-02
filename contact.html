@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lab test</title>
+
+    <style>
+        #contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 1%;
+        }
+        
+        .contactme {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+            font-family: "Source Sans Pro", sans-serif;
+            color: black;
+            border-radius: 62px;
+            width: 50%;
+            text-align: center;
+        }
+        
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-blend-mode: darken;
+            background-image: url(lab.jpg);
+        }
+        
+        .content1 {
+            background-color: #5979db;
+            width: 100%;
+            text-align: center;
+            /* border-radius: 8%; */
+            border-top-left-radius: 62px;
+            border-top-right-radius: 62px;
+        }
+        
+        .contactme h2 {
+            font-size: 2.9em;
+            position: relative;
+            font-family: "Source Sans Pro", sans-serif;
+        }
+        
+        .contactme input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 23px;
+            width: 82%;
+            background: #daeaff;
+            color: black;
+            border: none;
+        }
+        
+        .content {
+            padding: 2rem;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            max-height: fit-content;
+           
+        }
+        
+        #contactsubmit {
+            margin-top: 1em;
+            border: none;
+            border-radius: 20px;
+            background-color: #5979db;
+            color: black;
+            font-family: "Source Sans Pro", sans-serif;
+            padding: 10px;
+            text-align: center;
+            width: 50%;
+            cursor: pointer;
+            transition: 1s;
+        }
+        form{width: 100%;}
+        
+        #contactsubmit:hover {
+            background-color: black;
+            color: #5979db;
+        }
+        
+        @media screen and (max-width: 600px) {
+            #contactsubmit {
+                width: 100%;
+                margin-top: 0;
+            }
+            .contactme {
+                border-radius: 25px;
+            }
+            .content1 {
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;
+            }
+            .contactme h2 {
+                font-size: 2.2em;
+            }
+            #contact-section {
+                margin-top: 25%;
+            }
+        }
+        
+        .navlist li a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+        
+        .navlist li a:hover {
+            color: black;
+            background-color: #5979db;
+            padding: 15px;
+            transition: 0.6s;
+        }
+        
+        .navlist li {
+            list-style: none;
+            padding: 15px;
+        }
+        
+        .navlist {
+            display: flex;
+            align-items: center;
+            width: 70%;
+        }
+        
+        .right-nav {
+            width: 50%;
+            text-align: right;
+            padding-bottom: 35px;
+        }
+        
+        #navtime {
+            padding-right: 15px;
+        }
+        
+        #buttonnav {
+            margin-right: 10px;
+            background-color: #1bc47dfc;
+            border-radius: 20px;
+            border-color: transparent;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            margin-top: 28px;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            height: 70px;
+            background-color: white;
+            opacity: calc(0.7);
+            scroll-behavior: smooth;
+        }
+        
+        .logo img {
+            border: solid transparent;
+            border-radius: 50%;
+            width: 35%;
+        }
+        
+        .logo {
+            justify-content: center;
+            width: 150px;
+        }
+    </style>
+
+    <body>
+        <nav class="navbar">
+            <ul class="navlist">
+                <div class="logo"><img src="logo.png" /></div>
+                <li><a href="home.php">Home </a></li>
+                <li><a href="contact.php">Lab test </a></li>
+                <li><a href="appointment.php">Appointment </a></li>
+                <li><a href="home.php">Contact Us </a></li>
+                <li><a href="home.php">Branches </a></li>
+            </ul>
+            <div class="right-nav"><button id="buttonnav">Time </button><span id="navtime"></span></div>
+        </nav>
+        <section id="contact-section" class="">
+            <div class="contactme">
+                <div class="content1">
+                    <h2>Lab Test</h2>
+                </div>
+                <form>
+                    <div class="content"><input type="text" name="namef" id="firstname" placeholder="first name" onblur="validatef()" /><span id="fname" style="padding: 2px;"></span><br /><input type="text" name="namel" id="lastname" placeholder="last name" onblur="validatel()"
+                        />
+                        <span id="lname" style="padding: 2px;"></span><br /><input type="text" name="address" placeholder="Address" id="email" /><span id="mail" style="padding: 2px;"></span><br /><input type="text" name="test" placeholder="Test name"
+                        />
+                        <br /><input type="date" name="date" /><br /><input type="Time" name="time" /><br><button id="contactsubmit">Submit</button></div>
+            </div>
+            </form>
+        </section>
+        
+        </script>
+        <script src="hospital.js "></script>
+    </body>
+
+</html>
